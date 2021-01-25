@@ -1,6 +1,6 @@
 <?php
 
-namespace \PhpTools\Laravel\Controller;
+namespace PhpTools\Laravel\Controller;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Request;
@@ -27,8 +27,11 @@ class DevControllerPrototype
 
 		foreach($class->getMethods(\ReflectionMethod::IS_PUBLIC) as $m)
 		{
-			$method = $m->name;
-			echo '<a href="?method='.$method.'">'.$method.'</a><br/>';
+		    if(!($m->getModifiers() & \ReflectionMethod::IS_STATIC))
+		    {
+    			$method = $m->name;
+    			echo '<a href="?method='.$method.'">'.$method.'</a><br/>';
+		    }
 		}
 
 		die();

@@ -1,6 +1,6 @@
 <?php
 
-namespace \PhpTools\Primitives;
+namespace PhpTools\Primitives;
 
 class StringTools
 {
