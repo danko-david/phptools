@@ -1,0 +1,14 @@
+{
+	"name" : "danko_david/phptools",
+	"description" : "Php utility library",
+	"authors" : [{
+			"name" : "Dankó Dávid",
+			"email" : "info@dankodavid.hu"
+		}
+	],
+	"autoload" : {
+		"psr-4" : {
+			"PhpTools\\" : "src/"
+		}
+	}
+}
